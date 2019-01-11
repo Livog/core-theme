@@ -1,0 +1,10 @@
+{
+    "name": "fredriknordstrom/core",
+    "authors": [
+        {
+            "name": "Fredrik Nordström",
+            "email": "livog@live.com"
+        }
+    ],
+    "require": {}
+}
