@@ -20,7 +20,9 @@ Routes that the theme creates.
 
 **Pages & Posts**
 ```
-/api/core/v2/<post|page>/<route|id|empty>
+/api/core/v2/page/<route|id>
+/api/core/v2/post/<route|id>
+/api/core/v2/page/ //To get the start page.
 ```
 **Menus**
 ```
