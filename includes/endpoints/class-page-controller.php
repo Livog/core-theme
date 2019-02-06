@@ -9,7 +9,7 @@ class PageController {
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
-    register_rest_route( 'core/v2', 'post/(?P<id>\w+)', array(
+    register_rest_route( 'core/v2', 'post/(?P<id>.*)', array(
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
@@ -17,7 +17,7 @@ class PageController {
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
-    register_rest_route( 'core/v2', 'page/(?P<id>\w+)', array(
+    register_rest_route( 'core/v2', 'page/(?P<id>.*)', array(
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
