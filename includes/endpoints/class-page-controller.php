@@ -5,11 +5,15 @@ class PageController {
     
   public function register_routes()
   {
+    register_rest_route( 'core/v2', 'post', array(
+      'methods' => WP_REST_Server::READABLE,
+      'callback' => [$this, 'get_sections'],
+    ));
     register_rest_route( 'core/v2', 'post/(?P<id>\w+)', array(
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
-    register_rest_route( 'core/v2', 'post', array(
+    register_rest_route( 'core/v2', 'page', array(
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
@@ -17,6 +21,7 @@ class PageController {
       'methods' => WP_REST_Server::READABLE,
       'callback' => [$this, 'get_sections'],
     ));
+    
   }
 
   public function get_sections(WP_REST_Request $request)
@@ -54,7 +59,7 @@ class PageController {
     $response = new WP_REST_Response( $data );
     $response->header( 'Last-Modified', $last_modified );
     $response->header( 'Access-Control-Allow-Origin', '*');
-    $response->header( 'Cache-Control', 'public, max-age=3600');
+    $response->header( 'Cache-Control', 'public, max-age=600, s-maxage=600');
     $response->set_status( 200 );
     return $response;
     die;

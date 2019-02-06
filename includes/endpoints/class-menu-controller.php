@@ -21,7 +21,7 @@ class MenuController {
     $response = new WP_REST_Response( $locations );
     $response->header( 'Last-Modified', $last_modified );
     $response->header( 'Access-Control-Allow-Origin', '*');
-    $response->header( 'Cache-Control', 'public, max-age=3600');
+    $response->header( 'Cache-Control', 'public, max-age=600, s-maxage=600');
     $response->set_status( 200 );
     return $response;
     die;
@@ -42,7 +42,7 @@ class MenuController {
 
     $response = new WP_REST_Response( $menu_items );
     $response->header( 'Access-Control-Allow-Origin', '*');
-    $response->header( 'Cache-Control', 'public, max-age=3600');
+    $response->header( 'Cache-Control', 'public, max-age=600, s-maxage=600');
     $response->set_status( 200 );
     return $response;
     die;
