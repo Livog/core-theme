@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 include_once THEME_PATH . '/includes/acf.php';
 include_once THEME_PATH . '/includes/cleanup.php';
+include_once THEME_PATH . '/includes/replace-baseurl.php';
 include_once THEME_PATH . '/includes/endpoints/class-menu-controller.php';
 include_once THEME_PATH . '/includes/endpoints/class-page-controller.php';
 include_once THEME_PATH . '/includes/endpoints/class-redirects-controller.php';
