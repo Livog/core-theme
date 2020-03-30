@@ -15,10 +15,6 @@ Core is a good base for making your Wordpress site into a content API instead. M
 
 :white_check_mark: [WPML](https://wpml.org/) 
 
-### SEO Impacts
-
-This theme in itself will not bring any impacts on the SEO. Where ever this theme is hosted should have a noindex meta tag in head. It would how ever help you as it has the `get_post_seo` ([found here](https://github.com/Livog/core-theme/blob/master/includes/endpoints/class-seo-controller.php)) function to retrive the Yoast seo data that we all know and love. You can use this data to input it in your front-end app thats probably using something like Next.js SEO or Nuxt SEO.
-
 
 ## Routes
 Routes that the theme creates.
@@ -42,6 +38,10 @@ Routes that the theme creates.
 ```
 /api/core/v2/redirects
 ```
+
+### SEO Impacts
+
+This theme in itself will not bring any impacts on the SEO. Where ever this theme is hosted should have a noindex meta tag in head. It would how ever help you as it has the `get_post_seo` ([found here](https://github.com/Livog/core-theme/blob/master/includes/endpoints/class-seo-controller.php)) function to retrive the Yoast seo data that we all know and love. You can use this data to input it in your front-end app thats probably using something like Next.js SEO or Nuxt SEO.
 
 ### About
 
